@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 	private PendingIntent mNfcPendingIntent;
 	private AlertDialog.Builder alertDialog;
 	private AlertDialog resultDialog;
-	private final String IP = "http://192.168.11.6:3000";
+	private final String IP = "http://14.63.168.158";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -461,7 +461,7 @@ public class MainActivity extends Activity {
 		};
 
 		TextView pid = (TextView) findViewById(R.id.pidEt);
-		String url = IP + "/api/v1/tagged?pid=" + pid.getText().toString();
+		String url = IP + "/api/v1/taggedRW?pid=" + pid.getText().toString();
 		// 유저 reg_id update 하는 URL
 		requestTask.execute(url);
 	}
